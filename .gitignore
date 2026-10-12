@@ -1,0 +1,13 @@
+.DS_Store
+.cache/
+.serena/
+
+# Claude skill sync output: Anthropic-licensed, not ours to publish
+synced/
+.trash/
+
+# Local notes and the `make deck` output
+docs/
+
+__pycache__/
+*.pyc

@@ -1,0 +1,5 @@
+name: resolving-merge-conflicts
+description: "Use when you need to resolve an in-progress git merge/rebase conflict."
+metadata:
+  source: https://github.com/mattpocock/skills/blob/main/skills/engineering/resolving-merge-conflicts/SKILL.md
+  upstream-path: skills/engineering/resolving-merge-conflicts

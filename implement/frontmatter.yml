@@ -1,0 +1,6 @@
+name: implement
+description: "Implement a piece of work based on a spec or set of tickets."
+disable-model-invocation: true
+metadata:
+  source: https://github.com/mattpocock/skills/blob/main/skills/engineering/implement/SKILL.md
+  upstream-path: skills/engineering/implement

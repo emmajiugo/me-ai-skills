@@ -1,0 +1,9 @@
+name: gh-stack
+description: >
+  Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack.
+  Use for stack creation, viewing, edits, push, submit, sync, rebase, merge, or checkout;
+  when asked to split or isolate work for review; whenever a user mentions a stack,
+  branch layers, dependent PRs, or gh stack; or when a stack is checked out.
+metadata:
+  source: https://github.com/github/gh-stack/blob/main/skills/gh-stack/SKILL.md
+  upstream-path: skills/gh-stack

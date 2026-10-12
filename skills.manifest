@@ -1,0 +1,24 @@
+# local-name<TAB>source repo<TAB>path to the skill dir inside that repo
+# Vendored skills are rebuilt by scripts/build.mjs. Edit <name>/frontmatter.yml,
+# never <name>/SKILL.md.
+
+unslop	https://github.com/cursor/plugins	pstack/skills/unslop
+
+diagnosing-bugs	https://github.com/mattpocock/skills	skills/engineering/diagnosing-bugs
+writing-for-agents	https://github.com/mattpocock/skills	skills/productivity/writing-for-agents
+tdd	https://github.com/mattpocock/skills	skills/engineering/tdd
+domain-modeling	https://github.com/mattpocock/skills	skills/engineering/domain-modeling
+resolving-merge-conflicts	https://github.com/mattpocock/skills	skills/engineering/resolving-merge-conflicts
+codebase-design	https://github.com/mattpocock/skills	skills/engineering/codebase-design
+research	https://github.com/mattpocock/skills	skills/engineering/research
+git-guardrails-claude-code	https://github.com/mattpocock/skills	skills/misc/git-guardrails-claude-code
+grilling	https://github.com/mattpocock/skills	skills/productivity/grilling
+to-tickets	https://github.com/mattpocock/skills	skills/engineering/to-tickets
+wizard	https://github.com/mattpocock/skills	skills/engineering/wizard
+handoff	https://github.com/mattpocock/skills	skills/productivity/handoff
+wayfinder	https://github.com/mattpocock/skills	skills/engineering/wayfinder
+implement	https://github.com/mattpocock/skills	skills/engineering/implement
+to-spec	https://github.com/mattpocock/skills	skills/engineering/to-spec
+improve-codebase-architecture	https://github.com/mattpocock/skills	skills/engineering/improve-codebase-architecture
+grill-with-docs	https://github.com/mattpocock/skills	skills/engineering/grill-with-docs
+gh-stack	https://github.com/github/gh-stack	skills/gh-stack

@@ -1,0 +1,7 @@
+# Skills upstream refers to that you have deliberately not installed.
+# A call to one of these is not treated as a dangling reference.
+# Agents will still see the mention in the body text, so only list a skill you
+# are content for them to find missing.
+
+code-review
+setup-matt-pocock-skills

@@ -1,0 +1,12 @@
+name: unslop
+description: >-
+  Remove AI writing tells and add human voice to prose. Use whenever you write
+  or edit text a person will read: READMEs, docs, code comments, commit
+  messages, PR descriptions, changelogs, release notes, issue and ticket text,
+  blog posts, emails, chat messages, and your own replies to the user. Also use
+  when the user says "unslop", "de-slop", "sounds like AI", "make this sound
+  human", "remove the AI voice", or asks you to rewrite or tighten existing
+  text. Applies to any writing task, not only ones that mention AI style.
+metadata:
+  source: https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md
+  upstream-path: pstack/skills/unslop

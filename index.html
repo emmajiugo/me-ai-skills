@@ -1,0 +1,165 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>me-ai-skills</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --panel: #fff; --ink: #1c1b19; --muted: #6b6862;
+    --line: #e4e0d8; --accent: #7a4a1e; --auto: #2f5d3a; --manual: #6b6862;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161513; --panel: #1e1d1a; --ink: #ece9e3; --muted: #97928a;
+      --line: #302e2a; --accent: #d8a15f; --auto: #7bb98c; --manual: #97928a;
+    }
+  }
+  * { box-sizing: border-box }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+    padding: 3rem 1.5rem 5rem;
+  }
+  main { max-width: 62rem; margin: 0 auto }
+  h1 { font-size: 1.6rem; margin: 0 0 .3rem; letter-spacing: -.01em }
+  .sub { color: var(--muted); margin: 0 0 1.6rem }
+  input {
+    width: 100%; padding: .7rem .9rem; font: inherit; color: inherit;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px }
+  .count { color: var(--muted); font-size: .82rem; margin: .8rem 0 1.4rem }
+  .grid { display: grid; gap: .75rem }
+  article {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1rem 1.1rem;
+  }
+  .top { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap }
+  h2 { font-size: .98rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace }
+  .tag {
+    font-size: .68rem; letter-spacing: .04em; text-transform: uppercase;
+    border: 1px solid var(--line); border-radius: 999px; padding: .1rem .5rem;
+  }
+  .tag.auto { color: var(--auto); border-color: currentColor }
+  .tag.manual { color: var(--manual) }
+  .src { margin-left: auto; font-size: .75rem }
+  .src a { color: var(--muted); text-decoration: none }
+  .src a:hover { color: var(--accent); text-decoration: underline }
+  p.desc { margin: .55rem 0 0; color: var(--ink) }
+  .empty { color: var(--muted); padding: 2rem 0 }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: .8rem }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em }
+</style>
+<main>
+  <h1>me-ai-skills</h1>
+  <p class="sub">Shared by Claude Code and opencode from one directory.</p>
+  <input id="q" type="search" placeholder="Filter by name or description" autofocus>
+  <p class="count"><span id="n">22</span> of 22 skills &middot; 14 run on their own, 8 you invoke by name</p>
+  <div class="grid" id="grid">
+    <article data-search="codebase-design shared vocabulary for designing deep modules. use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or ai-navigable, or when another skill needs the deep-module vocabulary. mattpocock/skills">
+      <div class="top"><h2>codebase-design</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.</p>
+    </article>
+    <article data-search="commit-push guidelines to commit and create a pr local">
+      <div class="top"><h2>commit-push</h2><span class="tag auto">auto</span><span class="src">local</span></div>
+      <p class="desc">Guidelines to commit and create a PR</p>
+    </article>
+    <article data-search="diagnosing-bugs diagnosis loop for hard bugs and performance regressions. use when the user says &quot;diagnose&quot;/&quot;debug this&quot;, or reports something broken/throwing/failing/slow. mattpocock/skills">
+      <div class="top"><h2>diagnosing-bugs</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Diagnosis loop for hard bugs and performance regressions. Use when the user says &quot;diagnose&quot;/&quot;debug this&quot;, or reports something broken/throwing/failing/slow.</p>
+    </article>
+    <article data-search="domain-modeling build and sharpen a project's domain model. use when discussing codebase terminology, writing or editing a context.md, or recording or editing an adr. mattpocock/skills">
+      <div class="top"><h2>domain-modeling</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.</p>
+    </article>
+    <article data-search="gh-stack manages stacked prs and splits multi-part work into reviewable branches with gh-stack. use for stack creation, viewing, edits, push, submit, sync, rebase, merge, or checkout; when asked to split or isolate work for review; whenever a user mentions a stack, branch layers, dependent prs, or gh stack; or when a stack is checked out. github/gh-stack">
+      <div class="top"><h2>gh-stack</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/github/gh-stack">github/gh-stack</a></span></div>
+      <p class="desc">Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack. Use for stack creation, viewing, edits, push, submit, sync, rebase, merge, or checkout; when asked to split or isolate work for review; whenever a user mentions a stack, branch layers, dependent PRs, or gh stack; or when a stack is checked out.</p>
+    </article>
+    <article data-search="git-guardrails-claude-code set up claude code hooks to block dangerous git commands (push, reset --hard, clean, branch -d, etc.) before they execute. use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in claude code. mattpocock/skills">
+      <div class="top"><h2>git-guardrails-claude-code</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.</p>
+    </article>
+    <article data-search="grill-with-docs a relentless interview to sharpen a plan or design, which also creates docs (adr's and glossary) as we go. mattpocock/skills">
+      <div class="top"><h2>grill-with-docs</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.</p>
+    </article>
+    <article data-search="grilling grill the user relentlessly about a plan, decision, or idea. use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. mattpocock/skills">
+      <div class="top"><h2>grilling</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.</p>
+    </article>
+    <article data-search="handoff compact the current conversation into a handoff document for another agent to pick up. mattpocock/skills">
+      <div class="top"><h2>handoff</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Compact the current conversation into a handoff document for another agent to pick up.</p>
+    </article>
+    <article data-search="implement implement a piece of work based on a spec or set of tickets. mattpocock/skills">
+      <div class="top"><h2>implement</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Implement a piece of work based on a spec or set of tickets.</p>
+    </article>
+    <article data-search="improve-codebase-architecture scan a codebase for deepening opportunities, present them as a visual html report, then grill through whichever one you pick. mattpocock/skills">
+      <div class="top"><h2>improve-codebase-architecture</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.</p>
+    </article>
+    <article data-search="pr-review review a pr and post the findings as inline, line-anchored comments. local">
+      <div class="top"><h2>pr-review</h2><span class="tag manual">on request</span><span class="src">local</span></div>
+      <p class="desc">Review a PR and post the findings as inline, line-anchored comments.</p>
+    </article>
+    <article data-search="research investigate a question against high-trust primary sources and capture the findings as a markdown file in the repo. use when the user wants a topic researched, docs or api facts gathered, or reading legwork delegated to a background agent. mattpocock/skills">
+      <div class="top"><h2>research</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.</p>
+    </article>
+    <article data-search="resolving-merge-conflicts use when you need to resolve an in-progress git merge/rebase conflict. mattpocock/skills">
+      <div class="top"><h2>resolving-merge-conflicts</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Use when you need to resolve an in-progress git merge/rebase conflict.</p>
+    </article>
+    <article data-search="scope-ticket scope a reported bug, ticket, or issue and determine whether it is real, already fixed, or not reproducible, before writing any fix. use this whenever the user pastes a ticket, bug report, issue link, qa note, sentry/linear/jira item, or describes something as &quot;broken&quot;, &quot;reported&quot;, &quot;failing&quot;, or asks &quot;is this still an issue?&quot;, &quot;can you check this bug?&quot;, &quot;did we already fix this?&quot;, even if they never say &quot;verify&quot;. also use when a reported problem may span more than one service or repository. local">
+      <div class="top"><h2>scope-ticket</h2><span class="tag auto">auto</span><span class="src">local</span></div>
+      <p class="desc">Scope a reported bug, ticket, or issue and determine whether it is real, already fixed, or not reproducible, before writing any fix. Use this whenever the user pastes a ticket, bug report, issue link, QA note, Sentry/Linear/Jira item, or describes something as &quot;broken&quot;, &quot;reported&quot;, &quot;failing&quot;, or asks &quot;is this still an issue?&quot;, &quot;can you check this bug?&quot;, &quot;did we already fix this?&quot;, even if they never say &quot;verify&quot;. Also use when a reported problem may span more than one service or repository.</p>
+    </article>
+    <article data-search="tdd test-driven development. use when the user wants to build features or fix bugs test-first, mentions &quot;red-green-refactor&quot;, or wants integration tests. mattpocock/skills">
+      <div class="top"><h2>tdd</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions &quot;red-green-refactor&quot;, or wants integration tests.</p>
+    </article>
+    <article data-search="to-spec turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed. mattpocock/skills">
+      <div class="top"><h2>to-spec</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.</p>
+    </article>
+    <article data-search="to-tickets break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker). mattpocock/skills">
+      <div class="top"><h2>to-tickets</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).</p>
+    </article>
+    <article data-search="unslop remove ai writing tells and add human voice to prose. use whenever you write or edit text a person will read: readmes, docs, code comments, commit messages, pr descriptions, changelogs, release notes, issue and ticket text, blog posts, emails, chat messages, and your own replies to the user. also use when the user says &quot;unslop&quot;, &quot;de-slop&quot;, &quot;sounds like ai&quot;, &quot;make this sound human&quot;, &quot;remove the ai voice&quot;, or asks you to rewrite or tighten existing text. applies to any writing task, not only ones that mention ai style. cursor/plugins">
+      <div class="top"><h2>unslop</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/cursor/plugins">cursor/plugins</a></span></div>
+      <p class="desc">Remove AI writing tells and add human voice to prose. Use whenever you write or edit text a person will read: READMEs, docs, code comments, commit messages, PR descriptions, changelogs, release notes, issue and ticket text, blog posts, emails, chat messages, and your own replies to the user. Also use when the user says &quot;unslop&quot;, &quot;de-slop&quot;, &quot;sounds like AI&quot;, &quot;make this sound human&quot;, &quot;remove the AI voice&quot;, or asks you to rewrite or tighten existing text. Applies to any writing task, not only ones that mention AI style.</p>
+    </article>
+    <article data-search="wayfinder plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. mattpocock/skills">
+      <div class="top"><h2>wayfinder</h2><span class="tag manual">on request</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.</p>
+    </article>
+    <article data-search="wizard generate an interactive bash wizard that walks a human through steps only they can perform. use when provisioning infrastructure, setting up credentials or ci secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. don't invoke this for steps the agent can perform itself. mattpocock/skills">
+      <div class="top"><h2>wizard</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.</p>
+    </article>
+    <article data-search="writing-for-agents writing documents for agents. use when creating or editing skills, or modifying agents.md or claude.md. mattpocock/skills">
+      <div class="top"><h2>writing-for-agents</h2><span class="tag auto">auto</span><span class="src"><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></span></div>
+      <p class="desc">Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.</p>
+    </article>
+  </div>
+  <p class="empty" id="none" hidden>Nothing matches.</p>
+  <footer>Generated by <code>make build</code>. Do not edit this file.</footer>
+</main>
+<script>
+  const q = document.getElementById("q"), n = document.getElementById("n");
+  const cards = [...document.querySelectorAll("article")];
+  const none = document.getElementById("none");
+  q.addEventListener("input", () => {
+    const t = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+      const hit = !t || c.dataset.search.includes(t);
+      c.hidden = !hit;
+      if (hit) shown++;
+    }
+    n.textContent = shown;
+    none.hidden = shown > 0;
+  });
+</script>
