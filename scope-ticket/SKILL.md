@@ -37,6 +37,8 @@ If the code already handles the reported case, that is the verdict. Report it wi
 
 Write the smallest failing test that expresses the reported behavior, at the level where the bug actually lives. A unit test for a formatting bug, a feature or HTTP test for a request-lifecycle bug, an integration test for a boundary between components.
 
+Start from the nearest existing test for that code path and add the case there. Create a new test file only when no existing test covers the path.
+
 Interpreting the result:
 
 | Test outcome | Meaning |
@@ -62,7 +64,7 @@ Never infer another service's behavior from the calling code alone. A guess abou
 - **Prefer semantic code search, but do not depend on it.** When Serena MCP is connected, symbol lookup and reference finding trace a bug through a codebase faster than text grep. When it is not, use grep and targeted file reads and carry on. Never block the verdict on a missing tool.
 - **Delegate codebase exploration to a sub-agent** and work from the returned summary rather than reading files inline. Keeps the main thread focused on the verdict instead of filling up with file contents.
 - **Prefer simplicity.** The smallest test, the shortest path, the plainest explanation. Resist the urge to map the whole subsystem when three files answer the question.
-- **Do not fix anything yet.** If the fix is obvious, note it in one line under Next step and let the user decide.
+- **Leave the fix for later.** If the fix is obvious, note it in one line under Next step and let the user decide. When the user asks for the fix, run /implement and build on the reproducing test from step 3, following the same existing-test rule.
 
 ## Output
 

@@ -30,17 +30,24 @@ for (const entry of manifest) {
     ? readFileSync(fmPath, "utf8").replace(/\s*$/, "\n")
     : seedFrontmatter(entry, vendorDir);
 
+  // local.md is yours too: house rules appended after upstream's body.
+  const localPath = join(skillDir, "local.md");
+  const local = existsSync(localPath) ? readFileSync(localPath, "utf8") : null;
+
   rmSync(skillDir, { recursive: true, force: true });
   cpSync(vendorDir, skillDir, { recursive: true });
   writeFileSync(fmPath, frontmatter);
+  if (local !== null) writeFileSync(localPath, local);
 
   const { body } = splitSkill(readFileSync(join(vendorDir, "SKILL.md"), "utf8"));
-  writeFileSync(join(skillDir, "SKILL.md"), `---\n${frontmatter}---\n${applyRenames(body)}`);
+  let fullBody = applyRenames(body);
+  if (local?.trim()) fullBody = `${fullBody.replace(/\s*$/, "")}\n\n${local.trim()}\n`;
+  writeFileSync(join(skillDir, "SKILL.md"), `---\n${frontmatter}---\n${fullBody}`);
 
-  // Support files can also call a renamed skill. frontmatter.yml is yours and
-  // records the real upstream path, so it is never rewritten.
+  // Support files can also call a renamed skill. frontmatter.yml and local.md
+  // are yours, so they are never rewritten.
   for (const file of walk(skillDir)) {
-    if (file.endsWith("SKILL.md") || file.endsWith("frontmatter.yml")) continue;
+    if (file.endsWith("SKILL.md") || file.endsWith("frontmatter.yml") || file.endsWith("local.md")) continue;
     const before = readFileSync(file, "utf8");
     const after = applyRenames(before);
     if (after !== before) writeFileSync(file, after);

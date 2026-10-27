@@ -16,3 +16,5 @@ Run typechecking regularly, single test files regularly, and the full test suite
 Once done, use /code-review to review the work.
 
 Commit your work to the current branch.
+
+Before writing a test, look for an existing related test and extend it. Create a new test only when no existing test covers the behaviour.

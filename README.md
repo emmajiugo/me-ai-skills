@@ -46,11 +46,14 @@ Three pieces per skill:
 - `.vendor/<source>/<name>/` holds upstream untouched. Never edit it. Its git
   diff is the record of what upstream changed.
 - `<name>/frontmatter.yml` is yours. Description, triggers, invocation mode.
-- `<name>/SKILL.md` is generated from those two, plus any support files copied
+- `<name>/local.md` is optional and yours. Its contents are appended after
+  upstream's body, for house rules upstream does not have.
+- `<name>/SKILL.md` is generated from those, plus any support files copied
   from the vendor tree.
 
-Your frontmatter and upstream's body never overlap, so a sync cannot conflict.
-The cost is that everything except `frontmatter.yml` is overwritten on rebuild.
+Your files and upstream's body never overlap, so a sync cannot conflict. The
+cost is that everything except `frontmatter.yml` and `local.md` is overwritten
+on rebuild.
 
 `skills.manifest` is the list, one tab-separated row per skill: local name,
 source repo, path inside that repo.
