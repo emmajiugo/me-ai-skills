@@ -6,5 +6,6 @@ disable-model-invocation: true
 
 # pr comments reply
 
-Reply the comments with a simple single line short sentence.
+- Run `git status` first. If the fixes for the comments are uncommitted, commit them (`/commit-push`) and push before you reply, so the replies point at code that is on the PR.
+- Reply the comments with a simple single line short sentence.
 
